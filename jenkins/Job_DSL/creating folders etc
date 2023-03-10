@@ -1,0 +1,9 @@
+#give below cmd as a seperate lines..
+
+folder('project-a')
+
+freeStyleJob('project-a/compile')
+
+listView('project-a/pipeline')
+
+folder('project-a/testing')
