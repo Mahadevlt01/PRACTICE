@@ -1,0 +1,11 @@
+job('my-job') {
+    scm {
+        git('https://github.com/Mahadevlt01/PRACTICE.git')
+    }
+    triggers {
+        scm('H/15 * * * *')
+    }
+    steps {
+        maven('-e clean test')
+    }
+}
