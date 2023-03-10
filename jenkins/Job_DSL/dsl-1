@@ -2,10 +2,7 @@ def myJob = freeStyleJob('SimpleJob')
 myJob.with {
     description 'A Simple Job'
 }
-
 --------------------------------------------------------
-
 out.println('Hello from a Job DSL script!')
 println('Hello from a Job DSL script!')
-
 --------------------------------------------------------
