@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Building Package') {
             steps {
-                tool name: 'MyMaven', type: 'maven'
-                sh 'mvn clean test'
+                def MVN = tool name: 'MyMaven', type: 'maven'
+                sh "${MVN}/bin/mvn clean test"
             }
         }
     }
