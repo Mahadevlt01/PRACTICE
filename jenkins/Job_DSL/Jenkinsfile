@@ -1,9 +1,10 @@
 pipeline {
     agent any
-
+    
     stages {
         stage('Building Package') {
             steps {
+                tool name: 'MyMaven', type: 'maven'
                 sh 'mvn clean test'
             }
         }
