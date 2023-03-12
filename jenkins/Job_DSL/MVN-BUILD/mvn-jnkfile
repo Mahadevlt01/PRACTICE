@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    //tools {
+  //maven 'MyMaven'
+  //}
+    stages {
+        stage('Building Package') {
+            steps {
+                def MVN = tool name: 'MyMaven', type: 'maven'
+                sh "${MVN}/bin/mvn clean test"
+            }
+        }
+    }
+}
